@@ -1,5 +1,39 @@
+:root {
+  /* This is what everything looks like on a handheld device */
+  --base-font-size: 18px;
+  --transition-speed: 0.2s;
+
+  --container-width: 314px;
+
+  --font-weight-regular: 600;
+  --font-weight-bold: 700;
+
+  --font-size-xs: calc(var(--base-size) / 1.6);
+  --font-size-sm: calc(var(--base-size) / 1.2);
+  --font-size-md: var(--base-size);
+  --font-size-lg: calc(var(--base-size) * 1.2);
+  --font-size-xl: calc(var(--base-size) * 4);
+
+  --global-size-xs: 10px;
+  --global-size-sm: 14px;
+  --global-size-md: 16px;
+  --global-size-lg: 18px;
+  --global-size-xl: 20px;
+
+  --color-pink: #ff9494;
+  --color-brown: #6c5953;
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Desktop styles */
+    --base-font-size: 16px;
+  }
+}
+
 body,
 html {
+  font-size: var(--base-font-size);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -14,7 +48,7 @@ html {
 }
 
 .container {
-  width: 314px;
+  width: var(--container-width);
   flex-direction: column;
   background: #fff6ef;
 }
@@ -25,9 +59,9 @@ html {
   justify-content: center;
   box-sizing: border-box;
   background: #fff6ef;
-  border: 10px solid #ff9494;
+  border: 10px solid var(--color-pink);
   border-radius: 20px 20px 0px 0px;
-  width: 314px;
+  width: var(--container-width);
   height: 127.98px;
   border-bottom: 0px;
   border-bottom-width: 0px;
@@ -38,10 +72,8 @@ html {
 
 .cat-container {
   position: absolute;
-  left: 73.34%;
-  right: 0.64%;
-  top: 39%;
-  bottom: 0%;
+  right: 0;
+  bottom: 0;
   width: 88px;
   height: 78.44px;
 }
@@ -49,19 +81,18 @@ html {
 .header-title {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
+  font-weight: var(--font-weight-bold);
   line-height: 36px;
   display: flex;
   align-items: center;
   text-align: center;
-  color: #ff9494;
+  color: var(--color-pink);
 }
 
 .main-content {
   padding: 20px;
   border-top: 0px;
-  border: 10px solid #ff9494;
+  border: 10px solid var(--color-pink);
   border-radius: 0px 0px 20px 20px;
 }
 
@@ -113,9 +144,8 @@ input {
 }
 
 #addtask[type="checkbox"]::before {
-  font-size: 23px;
   content: "+";
-  color: #ff9494;
+  color: var(--color-pink);
   justify-content: center;
 }
 
@@ -132,22 +162,20 @@ input {
 .text-addtask {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: var(--font-weight-bold);
   line-height: 17px;
-  color: #ff9494;
+  color: var(--color-pink);
 }
 
 .text-task {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: var(--font-weight-regular);
   line-height: 17px;
   display: flex;
   align-items: center;
   text-align: center;
-  color: #6c5953;
+  color: var(--color-brown);
   padding-left: 10px;
 }
 
@@ -156,9 +184,8 @@ input {
 }
 
 #checkbox-one[type="checkbox"]:checked::after {
-  font-size: 23px;
   content: "✓";
-  color: #6c5953;
+  color: var(--color-brown);
   justify-content: center;
   background-color: #d7e3fc;
   width: 28.65px;
@@ -183,10 +210,12 @@ input {
   padding-right: 10px;
 }
 
-.button-edit {
+.button-delete, .button-edit {
+  transition: border-color var(--transition-speed), color var(--transition-speed);
+  cursor: pointer;
   width: 26.8px;
   height: 26.8px;
-  border: 1.85px solid #6c5953;
+  border: 1.85px solid var(--color-brown);
   border-radius: 92.6471px;
   background-color: transparent;
   margin: 3px;
@@ -195,16 +224,9 @@ input {
   align-content: center;
 }
 
-.button-delete {
-  width: 26.8px;
-  height: 26.8px;
-  border: 1.85px solid #6c5953;
-  border-radius: 92.6471px;
-  background-color: transparent;
-  margin: 3px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+.button-delete:hover, .button-edit:hover {
+  border-color: var(--color-pink);
+  color: var(--color-pink);
 }
 
 .checkbox-two {
@@ -212,9 +234,8 @@ input {
 }
 
 #checkbox-two[type="checkbox"]:checked::after {
-  font-size: 23px;
   content: "✓";
-  color: #6c5953;
+  color: var(--color-brown);
   justify-content: center;
   background-color: #ffc8dd;
   width: 28.65px;
@@ -233,15 +254,14 @@ input {
 }
 
 .checkbox-three {
-  border: 3px solid #ff9494;
+  border: 3px solid var(--color-pink);
 }
 
 #checkbox-three[type="checkbox"]:checked::after {
-  font-size: 23px;
   content: "✓";
-  color: #6c5953;
+  color: var(--color-brown);
   justify-content: center;
-  background-color: #ff9494;
+  background-color: var(--color-pink);
   width: 28.65px;
   height: 28.65px;
   border-radius: 50%;
@@ -251,7 +271,7 @@ input {
 .box-three {
   width: 215.86px;
   height: 33.43px;
-  background: #ff9494;
+  background: var(--color-pink);
   border-radius: 7.41176px;
   display: flex;
   justify-content: space-between;
@@ -262,9 +282,8 @@ input {
 }
 
 #checkbox-four[type="checkbox"]:checked::after {
-  font-size: 23px;
   content: "✓";
-  color: #6c5953;
+  color: var(--color-brown);
   justify-content: center;
   background-color: #ffd4b2;
   width: 28.65px;
@@ -287,9 +306,8 @@ input {
 }
 
 #checkbox-five[type="checkbox"]:checked::after {
-  font-size: 23px;
   content: "✓";
-  color: #6c5953;
+  color: var(--color-brown);
   justify-content: center;
   background-color: #fff4ac;
   width: 28.65px;
@@ -312,9 +330,8 @@ input {
 }
 
 #checkbox-six[type="checkbox"]:checked::after {
-  font-size: 23px;
   content: "✓";
-  color: #6c5953;
+  color: var(--color-brown);
   justify-content: center;
   background-color: #ceedc7;
   width: 28.65px;
