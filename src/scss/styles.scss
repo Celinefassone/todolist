@@ -1,52 +1,8 @@
-:root {
-  /* This is what everything looks like on a handheld device */
-  --base-font-size: 18px;
-  --transition-speed: 0.2s;
-
-  --container-width: 314px;
-
-  --font-weight-regular: 600;
-  --font-weight-bold: 700;
-
-  --font-size-xs: calc(var(--base-size) / 1.6);
-  --font-size-sm: calc(var(--base-size) / 1.2);
-  --font-size-md: var(--base-size);
-  --font-size-lg: calc(var(--base-size) * 1.2);
-  --font-size-xl: calc(var(--base-size) * 4);
-
-  --global-size-xs: 10px;
-  --global-size-sm: 14px;
-  --global-size-md: 16px;
-  --global-size-lg: 18px;
-  --global-size-xl: 20px;
-
-  --color-white: #fff6ef;
-  --color-pink: #ff9494;
-  --color-brown: #6c5953;
-  --color-green: #ceedc7;
-  --color-blue: #d7e3fc;
-  --color-yellow: #fff4ac;
-  --color-orange: #ffd4b2;
-  --color-lightpink: #ffc8dd;
-
-  --padding-size-s: 5px;
-  --padding-size-m: 10px;
-  --padding-size-l: 20px;
-}
-
 @media (min-width: 768px) {
   :root {
     /* Desktop styles */
     --base-font-size: 16px;
   }
-}
-
-body,
-html {
-  font-size: var(--base-font-size);
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .container-box {
@@ -62,19 +18,6 @@ html {
   background: var(--color-white);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background: var(--color-white);
-  border: 10px solid var(--color-pink);
-  border-radius: 20px 20px 0px 0px;
-  padding: var(--padding-size-l);
-  border-bottom-style: initial;
-  position: relative;
-}
-
 .cat-container {
   position: absolute;
   right: 0;
@@ -86,16 +29,6 @@ html {
 
 .cat-img {
   width: 100%;
-}
-
-.header-title {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: var(--font-weight-bold);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: var(--color-pink);
 }
 
 .main-content {
