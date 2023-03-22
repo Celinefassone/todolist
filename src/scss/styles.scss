@@ -5,19 +5,6 @@
   }
 }
 
-.container-box {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  width: var(--container-width);
-  flex-direction: column;
-  background: var(--color-white);
-}
-
 .cat-container {
   position: absolute;
   right: 0;
