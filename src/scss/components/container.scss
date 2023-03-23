@@ -1,5 +1,4 @@
 .container {
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -8,7 +7,6 @@
   &--box {
     width: var(--container-width);
     flex-direction: column;
-    background: #fff6ef;
     background: var(--color-white);
   }
 }

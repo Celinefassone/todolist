@@ -1,13 +1,12 @@
 .task {
   margin: 15px 0px 0px 0px;
-  display: flex;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 
   &-text {
     font-family: "Inter";
@@ -23,26 +22,28 @@
 
   &-checkbox {
     border: 3px solid var(--color-blue);
-  }
 
-  &-checkbox[type="checkbox"]:checked::after {
-    content: "✓";
-    color: var(--color-brown);
-    justify-content: center;
-    background-color: var(--color-blue);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    &:checked {
+      &::after {
+        content: "✓";
+        color: var(--color-brown);
+        justify-content: center;
+        background-color: var(--color-blue);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+      }
+    }
   }
 
   &-box {
-    width: 206px;
+    display: flex;
+    flex: 1;
     background: var(--color-blue);
     border-radius: 7px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -77,11 +78,11 @@
 }
 
 input {
+  appearance: none;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-appearance: none;
   flex-wrap: wrap;
   display: flex;
   align-content: center;
