@@ -9,28 +9,35 @@
     <script type="module" src="/src/main.js"></script>
 
     <main role="main" class="container">
-      <div class="container-box">
+      <div class="container--box">
         <header class="header">
-          <h1 class="header-title">TO DO LIST</h1>
-          <div class="cat-container">
-            <img class="cat-img" src="/static/cat.png" />
+          <h1 class="header--title">TO DO LIST</h1>
+          <div class="cat">
+            <img class="cat--img" src="/static/cat.png" />
           </div>
         </header>
-        <section class="main-content">
-          <div class="content">
+        <section class="content">
+          <div class="content--box">
             <ul class="list">
-              <li class="list-addtask">
-                <input type="checkbox" class="addtask" id="addtask" />
-                <label for="addtask" class="box-addtask">
-                  <p class="text-addtask">Add Task</p></label
-                >
+              <li class="addtask">
+                <button type="button" value="Add Task" class="addtask-box">
+                  <p class="addtask-text">Add Task</p>
+                </button>
               </li>
-              <li class="list-element">
-                <input type="checkbox" class="checkbox" id="checkbox" />
-                <label for="checkbox" class="box">
-                  <p class="text-task">Task 1</p>
-                  <div class="buttons-box">
-                    <button type="submit" id="button-edit" class="button-edit">
+              <li class="task">
+                <input
+                  type="checkbox"
+                  class="task-checkbox"
+                  id="task-checkbox"
+                />
+                <label for="task-checkbox" class="task-box">
+                  <p class="task-text">Task 1</p>
+                  <div class="task-buttonbox">
+                    <button
+                      type="submit"
+                      id="task-button-edit"
+                      class="task-button-edit"
+                    >
                       <svg
                         width="15"
                         height="15"
@@ -46,8 +53,8 @@
                     </button>
                     <button
                       type="submit"
-                      id="button-delete"
-                      class="button-delete"
+                      id="task-button-delete"
+                      class="task-button-delete"
                     >
                       <svg
                         width="15"
