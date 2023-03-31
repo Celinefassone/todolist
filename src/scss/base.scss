@@ -1,5 +1,7 @@
 body,
-html {
+html,
+#app {
+  font-family: var(--font-family-roboto-regular);
   font-size: var(--base-font-size);
   height: 100%;
   margin: 0;

@@ -1,5 +1,7 @@
 .list {
   padding: 0px;
+  max-height: 350px;
+  overflow-y: scroll;
 
   &--addtask {
     display: flex;
@@ -20,7 +22,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: "Inter";
+      font-family: var(--font-family-roboto-bold);
       font-style: normal;
       font-weight: var(--font-weight-bold);
       color: var(--color-pink);
@@ -33,12 +35,5 @@
         cursor: pointer;
       }
     }
-  }
-}
-
-@media (min-width: 768px) {
-  :root {
-    /* Desktop styles */
-    --base-font-size: 16px;
   }
 }

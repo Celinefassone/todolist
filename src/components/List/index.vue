@@ -1,6 +1,7 @@
 <script setup>
 import Task from '@/components/List/Task'
 </script>
+
 <template>
   <ul class="list">
     <li class="list--addtask">
@@ -10,6 +11,26 @@ import Task from '@/components/List/Task'
     </li>
 
     <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+    <Task />
+
   </ul>
 </template>
 

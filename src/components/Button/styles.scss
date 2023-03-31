@@ -1,0 +1,18 @@
+.button {
+  transition: border-color var(--transition-speed), color var(--transition-speed);
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--color-brown);
+  border-radius: 92px;
+  background-color: transparent;
+  margin: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+  &:hover {
+    border-color: var(--color-pink);
+    color: var(--color-pink);
+  }
+}

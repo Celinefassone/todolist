@@ -2,18 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  background: var(--color-white);
-  border: 10px solid var(--color-pink);
+  border-bottom: 10px solid var(--color-pink);
   border-radius: 20px 20px 0px 0px;
   padding: var(--padding-size-l);
-  border-bottom-style: initial;
   position: relative;
 
   &--title {
-    font-family: "Inter";
+    font-family: var(--font-family-roboto-bold);
     font-style: normal;
-    font-weight: var(--font-weight-bold);
     color: var(--color-pink);
   }
 }
@@ -27,12 +23,5 @@
 
   &--img {
     width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  :root {
-    /* Desktop styles */
-    --base-font-size: 16px;
   }
 }

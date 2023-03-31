@@ -9,7 +9,7 @@ import List from '@/components/List'
       <Header />
 
       <section class="home-page--content">
-          <List />
+        <List />
       </section>
     </div>
   </main>

@@ -5,6 +5,11 @@
 
   --container-width: 314px;
 
+  --font-family-roboto-regular: "Roboto-Regular";
+  --font-family-roboto-light: "Roboto-Light";
+  --font-family-roboto-bold: "Roboto-Bold";
+  --font-family-roboto-slab: "Roboto-Slab";
+
   --font-weight-regular: 600;
   --font-weight-bold: 700;
 
@@ -32,4 +37,10 @@
   --padding-size-s: 5px;
   --padding-size-m: 10px;
   --padding-size-l: 20px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --base-font-size: 16px;
+  }
 }
