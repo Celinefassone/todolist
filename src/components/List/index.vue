@@ -54,7 +54,6 @@ export default {
       await this.$store.dispatch('todos/ADD', this.inputValue)
 
       this.inputValue = ''
-      this.adding = false
     }
   }
 }
