@@ -6,16 +6,27 @@ import { Trash, Edit } from '@/components/Icons'
 <template>
   <li class="task">
     <input type="checkbox" class="task-checkbox" />
-
     <label for="task-checkbox" class="task-box">
-      <p class="task-text">Task 1</p>
+      <p class="task-text">{{ todo.title }}</p>
       <div class="task-buttonbox">
         <Button><Edit /></Button>
-        <Button><Trash /></Button>
+        <Button @click="handleDelete"><Trash /></Button>
       </div>
     </label>
   </li>
 </template>
+
+<script>
+export default {
+  props:['todo'],
+  methods: {
+    async handleDelete() {
+      await this.$store.dispatch('todos/DELETE', this.todo._id)
+      this.$store.dispatch('todos/FETCH')
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @use './styles.scss';
