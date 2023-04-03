@@ -1,6 +1,8 @@
 <script setup>
 import { mapState } from 'vuex'
 import Task from '@/components/List/Task'
+import { Trash } from '@/components/Icons'
+
 </script>
 
 <template>
@@ -11,16 +13,15 @@ import Task from '@/components/List/Task'
       </button>
     </li>
 
-    <li v-show="adding">
-      <form @submit.prevent="handleSubmit">
-        <button type="button" @click="adding = false">
-          Cancel
-        </button>
+    <li v-show="adding" class="list--addtask">
+      <form @submit.prevent="handleSubmit" class="list--addtask-button">
       
-        <input ref="todo-input" v-model="inputValue" type="text" placeholder="title" />
+        <input ref="todo-input" v-model="inputValue" type="text" placeholder="Task" class="list--addtask-button-input"/>
 
-        <button type="submit">
-          Add TODO
+        <button type="submit" class="list--addtask-button-add">+
+        </button>
+        <button type="button" class="list--addtask-button-cancel" @click="adding = false">
+        X
         </button>
       </form>
     </li>

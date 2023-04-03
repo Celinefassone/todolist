@@ -12,6 +12,7 @@
     justify-content: space-between;
     flex-direction: row;
     gap: 5px;
+    margin: 15px 0px 0px 0px;
 
     &-button {
       width: 100%;
@@ -27,12 +28,50 @@
       font-weight: var(--font-weight-bold);
       color: var(--color-pink);
       margin: 0px;
-      padding: var(--padding-size-s);
 
       &:hover {
         color: var(--color-green);
         border: 3px dashed var(--color-pink);
         cursor: pointer;
+      }
+
+      &-input {
+        border: hidden;
+        font-size: 16px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-family-roboto-bold);
+        font-style: normal;
+        font-weight: var(--font-weight-bold);
+        padding: var(--padding-size-s);
+        color: var(--color-pink);
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      &-add,
+      &-cancel {
+        transition: border-color var(--transition-speed), color var(--transition-speed);
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        border: 2px solid var(--color-brown);
+        color: var(--color-brown);
+        border-radius: 92px;
+        background-color: transparent;
+        margin: 3px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+
+        &:hover {
+          border-color: var(--color-pink);
+          color: var(--color-pink);
+        }
       }
     }
   }
