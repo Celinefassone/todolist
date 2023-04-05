@@ -1,7 +1,6 @@
 <script setup>
 import { mapState } from 'vuex'
 import Task from '@/components/List/Task'
-import { Trash } from '@/components/Icons'
 
 </script>
 
@@ -26,7 +25,11 @@ import { Trash } from '@/components/Icons'
       </form>
     </li>
 
-    <Task v-for="(todo, index) in todos" :key="index" :todo="todo" />
+    <Task
+      v-for="(todo, index) in todos"
+      :key="index"
+      :todo="todo"
+    />
   </ul>
 </template>
 

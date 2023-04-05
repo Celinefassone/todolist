@@ -4,7 +4,7 @@ import { Trash, Edit } from '@/components/Icons'
 </script>
 
 <template>
-  <li class="task">
+  <li :class="`task ${todo.className || 'color-default'}`">
     <input type="checkbox" class="task-checkbox" />
     <label for="task-checkbox" class="task-box">
       <p class="task-text">{{ todo.title }}</p>

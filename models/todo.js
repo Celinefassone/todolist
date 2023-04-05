@@ -15,10 +15,9 @@ const todoSchema = mongoose.Schema({
     required: true,
     default: Date.now,
   },
-  cardColor: {
+  className: {
     type: String,
-    required: true,
-    default: "#cddc39",
+    required: false,
   },
   isCompleted: {
     type: Boolean,

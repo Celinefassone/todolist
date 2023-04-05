@@ -1,4 +1,6 @@
 .task {
+  $self: &;
+
   margin: 15px 0px 0px 0px;
   justify-content: center;
   display: flex;
@@ -19,14 +21,13 @@
   }
 
   &-checkbox {
-    border: 3px solid var(--color-blue);
+    border: 3px solid;
 
     &:checked {
       &::after {
         content: "✓";
         color: var(--color-brown);
         justify-content: center;
-        background-color: var(--color-blue);
         width: 35px;
         height: 35px;
         border-radius: 50%;
@@ -40,7 +41,6 @@
   &-box {
     display: flex;
     flex: 1;
-    background: var(--color-blue);
     border-radius: 7px;
     justify-content: space-between;
     align-items: center;
@@ -51,6 +51,39 @@
     flex-wrap: wrap;
     align-content: center;
     padding-right: var(--padding-size-m);
+  }
+
+  &.color-default {
+    --color: var(--color-pink);
+  }
+  &.color-green {
+    --color: var(--color-green);
+  }
+  &.color-blue {
+    --color: var(--color-blue);
+  }
+  &.color-yellow {
+    --color: var(--color-yellow);
+  }
+  &.color-orange {
+    --color: var(--color-orange);
+  }
+  &.color-lightpink {
+    --color: var(--color-lightpink);
+  }
+
+  #{ $self }-box {
+    background-color: var(--color);
+  }
+
+  #{ $self }-checkbox {
+    border-color: var(--color);
+
+    &:checked {
+      &::after {
+        background-color: var(--color);
+      }
+    }
   }
 }
 
