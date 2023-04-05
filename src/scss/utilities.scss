@@ -1,0 +1,27 @@
+.color {
+  &--background {
+    &-pink {
+      background-color: #ff9494;
+    }
+
+    &-lightpink {
+      background-color: #ffc8dd;
+    }
+
+    &-green {
+      background-color: #ceedc7;
+    }
+
+    &-green {
+      background-color: #d7e3fc;
+    }
+
+    &-yellow {
+      background-color: #fff4ac;
+    }
+
+    &-orange {
+      background-color: #ffd4b2;
+    }
+  }
+}

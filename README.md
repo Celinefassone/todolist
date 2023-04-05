@@ -8,8 +8,10 @@ First you need to start the data base so that the server can connect to it and y
 To stop it at the end of the development period, run the next line
 `brew services stop mongodb-community@6.0`
 
-Then you need to start the backend server so that the API is ready to use for the frontend.
+Then (in another terminal tab) you need to start the backend server so that the API is ready to use for the frontend.
 `npm run start:be`
 
-Once that's sorted, then why not run the frontend with
+Once that's sorted, then why not run the frontend (in another terminal tab) with
 `npm run dev`
+
+VITE_TODO_API_URL=http://localhost:3000/api/v1/todo
