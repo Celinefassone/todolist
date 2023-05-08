@@ -2,16 +2,38 @@
 
 This application is a To Do list in which users can add and delete tasks. Users can also mark the tasks they have completed by checking a checkbox. These tasks are saved in a data base so that even when the To Do list is not running anymore the tasks will be saved and users will be able to access the same date at another time.
 
+## Requirements
+
+In order to run the application, you will need Node.js and Mongodb installed. These should be installed globally.
+
+To install Node.js, use the following link and follow their recommendations for your operating system.
+
+### Node.js
+We recommend using Homebrew for your Mac packagae management or for Windows, use Chocolatey. 
+
+https://nodejs.org/en
+
+With homebrew
+https://formulae.brew.sh/formula/node
+
+### Mongodb UPDATE THIS CELINE
+
 ## How to run the application
 
-Open Terminal and change the working directory to the location where you want the project to be
-by accessing the folder with the command `cd` and make a new directory my using the `mkdir`
+Open Terminal and change the working directory to the location where you want the project to be installed
+by accessing the folder with the command `cd` to change directory.
 
+Then run 
 `git clone git@github.com:Celinefassone/todolist.git`
+
+And cd in to the directory /todolist.
 
 Make sure to do `npm install` first to install the latest dependencies.
 
 First you need to start the data base so that the server can connect to it and you can save TODOs.
+## With Homebrew
+
+If you installed Mongodb using homebrew, then run the following.
 `brew services start mongodb-community@6.0`
 
 To stop it at the end of the development period, run the next line
@@ -20,7 +42,7 @@ To stop it at the end of the development period, run the next line
 Then (open another terminal tab by using command t) you need to start the backend server so that the API is ready to use for the frontend.
 `npm run start:be`
 
-Once that's sorted, then why not run the frontend (in another terminal tab) with
+Once that's running, run the frontend (in another terminal tab) with
 `npm run dev`
 
 ## API
